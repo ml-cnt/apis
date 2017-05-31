@@ -238,7 +238,7 @@
 <span class="kd">var</span> <span class="nx">jsonwebtoken</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jsonwebtoken'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">api_key</span> <span class="o">=</span> <span class="s2">"idnviKJKJIIaa"</span>
 <span class="kd">var</span> <span class="nx">api_secret</span> <span class="o">=</span> <span class="s2">"8e2d92f39c8f303ad8336d61f81bd06ee4e5d4..."</span>
-<span class="kd">var</span> <span class="nx">exp</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">exp</span> <span class="o">=</span> <span class="p">((</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">60</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">payload</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">key</span><span class="p">:</span> <span class="nx">api_key</span><span class="p">,</span>
   <span class="na">exp</span><span class="p">:</span> <span class="nx">exp</span>
