@@ -287,9 +287,31 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h1 id="member-group">Member Group</h1>
 
+<p>Member Group - เป็น Function สำหรับแบ่งแยก Member ให้อยู่ในหมวดต่างๆ เช่น สาขา ระดับผู้ใช้งาน หรือ อื่นๆตามความต้องการ</p>
+
+<p>ประกอบด้วย Api 3 อย่างคือ</p>
+
+<ol>
+<li>List Member Groups
+
+<ol>
+<li>Return all member groups with <code class="prettyprint">UID</code></li>
+</ol></li>
+<li>Create Member Group
+
+<ol>
+<li>Create and return 1 Member Group with <code class="prettyprint">UID</code></li>
+</ol></li>
+<li>Update Member Group
+
+<ol>
+<li>Update Member Group with supplied <code class="prettyprint">UID</code></li>
+</ol></li>
+</ol>
+
           <h2 id="list-member-groups">List member groups</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -326,7 +348,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member-group">Create member group</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -378,7 +400,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="update-member-group">Update member group</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${uid}'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${uid}'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -436,7 +458,7 @@ It is important that the expiry time must be in the Unix time format and no more
 <p>List members by keyword. If you do not specify keyword, it will return first 100 members.</p>
 </blockquote>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -489,7 +511,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="member">Member</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${uid}'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${uid}'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -527,7 +549,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member">Create member</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -570,7 +592,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member-from-membership-number">Create member from membership number</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/create_from_membership_number'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/create_from_membership_number'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -624,7 +646,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="update-member">Update member</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${uid}'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${uid}'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -667,7 +689,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="update-member-profile-image">Update member profile image</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${uid}/update_profile_image'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${uid}/update_profile_image'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -791,7 +813,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="get-member-public-link-from-membership-number">Get Member Public Link from membership number</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/member_public_links/get_from_membership_number'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/member_public_links/get_from_membership_number'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -844,7 +866,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="list-member-public-link">List member public link</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -894,7 +916,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="member-public-link">Member public link</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -930,7 +952,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member-public-link">Create member public link</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -981,7 +1003,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="update-member-public-link">Update member public link</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}'</span><span class="p">,</span><span class="nx">config</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>

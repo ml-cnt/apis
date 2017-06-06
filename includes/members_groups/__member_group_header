@@ -1,1 +1,23 @@
 <h1 id="member-group">Member Group</h1>
+
+<p>Member Group - เป็น Function สำหรับแบ่งแยก Member ให้อยู่ในหมวดต่างๆ เช่น สาขา ระดับผู้ใช้งาน หรือ อื่นๆตามความต้องการ</p>
+
+<p>ประกอบด้วย Api 3 อย่างคือ</p>
+
+<ol>
+<li>List Member Groups
+
+<ol>
+<li>Return all member groups with <code class="prettyprint">UID</code></li>
+</ol></li>
+<li>Create Member Group
+
+<ol>
+<li>Create and return 1 Member Group with <code class="prettyprint">UID</code></li>
+</ol></li>
+<li>Update Member Group
+
+<ol>
+<li>Update Member Group with supplied <code class="prettyprint">UID</code></li>
+</ol></li>
+</ol>
