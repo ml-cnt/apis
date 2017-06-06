@@ -236,8 +236,8 @@
 </blockquote>
 <pre class="highlight javascript tab-javascript"><code>
 <span class="kd">var</span> <span class="nx">jsonwebtoken</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jsonwebtoken'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">api_key</span> <span class="o">=</span> <span class="s2">"idnviKJKJIIaa"</span>
-<span class="kd">var</span> <span class="nx">api_secret</span> <span class="o">=</span> <span class="s2">"8e2d92f39c8f303ad8336d61f81bd06ee4e5d4..."</span>
+<span class="kd">var</span> <span class="nx">api_key</span> <span class="o">=</span> <span class="s2">"OPscp3BEng"</span>
+<span class="kd">var</span> <span class="nx">api_secret</span> <span class="o">=</span> <span class="s2">"XlnhM3yzCuNBZxup-4pCioifTbjmr_0bBA_L90qAf6bbvWtA7bDI2SmN4j8-E65C"</span>
 <span class="kd">var</span> <span class="nx">exp</span> <span class="o">=</span> <span class="p">((</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">60</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">payload</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">key</span><span class="p">:</span> <span class="nx">api_key</span><span class="p">,</span>
@@ -254,13 +254,13 @@
 
 <span class="c1">// request using Axios</span>
 <span class="c1">// GET</span>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'https://dev-ticket.cloudandthing.com/api/v1/user/someapi'</span><span class="p">,</span> <span class="nx">config</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'https://dev-mellow-lounge-v2.cloudandthing.com/api/v2/user/someapi'</span><span class="p">,</span> <span class="nx">config</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
-  <span class="p">});</span> 
+  <span class="p">});</span>
 
 <span class="c1">// POST,PUT,PATCH</span>
 <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'https://dev-ticket.cloudandthing.com/api/v1/user/someapi'</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">config</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'https://dev-mellow-lounge-v2.cloudandthing.com/api/v2/user/someapi'</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">config</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
   <span class="p">});</span>
 
@@ -285,11 +285,11 @@
 It is important that the expiry time must be in the Unix time format and no more than one minute in the future. Always regenerate JWT for every single API request.
 </aside>
 
-          <h1 id="tickets-report">Tickets Report</h1>
+          <h1 id="member-group">Member Group</h1>
 
-          <h2 id="created-tickets">Created Tickets</h2>
+          <h2 id="list-member-groups">List member groups</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v1/ticket_groups/SKU123456/tickets/created'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -302,20 +302,58 @@ It is important that the expiry time must be in the Unix time format and no more
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"ticket_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">'created'</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"8DIEd8sJSQ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"new member group"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ทดสอบการสร้าง"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"ticket_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12346"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="err">'created'</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"iQfA0-qT7A"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member Group 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Edit Member Group"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"Main Group"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all ticket with status <code class="prettyprint">created</code>.</p>
+<p>This endpoint retrieves all member groups.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET /api/v1/ticket_groups/${sku}/tickets/created</code></p>
+<p><code class="prettyprint">GET /api/v2/member_groups</code></p>
+
+          <h2 id="create-member-group">Create member group</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"iQfA0-qT7A"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member Group 1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Create Member Group 1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves create member groups.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST /api/v2/member_groups</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -327,14 +365,719 @@ It is important that the expiry time must be in the Unix time format and no more
 </tr>
 </thead><tbody>
 <tr>
-<td>ticket_number</td>
+<td>name</td>
 <td>String</td>
-<td>Ticket number</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
+          <h2 id="update-member-group">Update member group</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${uid}'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"iQfA0-qT7A"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member Group 1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Edit Member Group"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves edit member groups.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PATCH /api/v2/member_groups/${uid}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
+          <h1 id="member">Member</h1>
+
+          <h2 id="list-members">List members</h2>
+
+<blockquote>
+<p>List members by keyword. If you do not specify keyword, it will return first 100 members.</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"LtLN6AH0Ig"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jutamas"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Thongkapon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"juthamas.ko@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0886185060"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"registered"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-19T16:59:59.999Z"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"51yFaJ28LA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Polwat"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Thongnit"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"polwat.thongnit@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0889999999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"registered"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-18T16:59:59.999Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves members in member group.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /api/v2/member_groups/${member_group_uid}/members</code></p>
+
+          <h2 id="member">Member</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${uid}'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"LtLN6AH0Ig"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jutamas"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Thongkapon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"juthamas.ko@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0886185060"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"registered"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-19T16:59:59.999Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves member in member group.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET api/v2/member_groups/${member_group_uid}/members/${uid}</code></p>
+
+          <h2 id="create-member">Create member</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1@gmai.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0889999999"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves create member.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST /api/v2/member_groups/${member_group_uid}/members</code></p>
+
+          <h2 id="create-member-from-membership-number">Create member from membership number</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/create_from_membership_number'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"5wQCyyQ55Q"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"create_member@gmail.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"088-1234321"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00005"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves create member from membership number.</p>
+
+<ul>
+<li>This api will create member from membership number if the specific membership number is not already exist in business client database.</li>
+<li>If the membership number already exists, it will update a member who has the same membership number value.</li>
+</ul>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /api/v2/member_groups/${member_group_uid}/members/create_from_membership_number</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<ul>
+<li>membership_number is required field.</li>
+</ul>
+
+          <h2 id="update-member">Update member</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${uid}'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test_1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member_1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1234@gmai.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"089-1234567"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves update Member.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PATCH /api/v2/member_groups/${member_group_uid}/members/${uid}</code></p>
+
+          <h2 id="update-member-profile-image">Update member profile image</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${uid}/update_profile_image'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test_1"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member_1"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1234@gmai.com"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"089-1234567"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mellow-lounge-v2-dev.s3-ap-southeast-1.amazonaws.com/members/profile_images/000/000/696/original/man-156584_960_720.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJAUIDIX6S3LKZR3A%2F20170602%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20170602T091015Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bcf06faa969079d71a25d65556650bcfc73da7073259e13e7b96269ed8088d27"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves update member profile image.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PATCH api/v2/member_groups/${member_group_uid}/members/${uid}/update_profile_image</code></p>
+
+          <h2 id="member-parameters">Member Parameters</h2>
+
+<ul>
+<li>pk_template_name is required for every member</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>คำนำหน้า</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>String</td>
+<td>ชื่อจริง</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>String</td>
+<td>นามสกุล</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>อีเมล์</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>String</td>
+<td>โทรศัพท์</td>
+</tr>
+<tr>
+<td>membership_number</td>
+<td>String</td>
+<td>หมายเลขสมาชิก</td>
+</tr>
+<tr>
+<td>profile_image_url</td>
+<td>String_url</td>
+<td>รูปภาพโปรไฟล์</td>
+</tr>
+<tr>
+<td>time_zone_preference</td>
+<td>String</td>
+<td>โซนเวลา</td>
+</tr>
+<tr>
+<td>pk_template_name</td>
+<td>String</td>
+<td>รูปแบบบัตรสมาชิก</td>
 </tr>
 <tr>
 <td>status</td>
 <td>String</td>
-<td>&lsquo;created&rsquo;</td>
+<td>สถานะ</td>
+</tr>
+<tr>
+<td>ui_language</td>
+<td>String</td>
+<td>ภาษา</td>
+</tr>
+<tr>
+<td>expire_datetime</td>
+<td>datetime</td>
+<td>วันหมดอายุ</td>
+</tr>
+</tbody></table>
+
+          <h1 id="public-link">Public link</h1>
+
+          <h2 id="get-member-public-link-from-membership-number">Get Member Public Link from membership number</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/member_public_links/get_from_membership_number'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"public_link"</span><span class="w"> </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"EksYb8ZIog"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"membership_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00005"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expire_datetime"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T23:59:00.000+07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"retrieval_limit"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"retrieval_count"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"verification_options"</span><span class="p">:</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"running_number"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"pass_url"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/EksYb8ZIog"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves get public link from membership number.</p>
+
+<ul>
+<li>Mellow Lounge will query member&rsquo;s public links from membership number. It will return the latest active public link.</li>
+<li>If the member doesn&rsquo;t have any public link, it will create and return a new public link.</li>
+<li>Public Link option must be enabled in member group before using this api.</li>
+</ul>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET api/v2/member_groups/${member_group_uid}/member_public_links/get_from_membership_number</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<ul>
+<li>membership_number is required field.</li>
+<li>expire_datetime is required field.</li>
+</ul>
+
+          <h2 id="list-member-public-link">List member public link</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"TiHYgGk3Vg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-04T00:00:00.000+07:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"retrieval_limit"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"retrieval_count"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"verification_options"</span><span class="p">:</span><span class="w">
+  </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"running_number"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/TiHYgGk3Vg"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"wApY3CTo6Q"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-04T00:00:00.000+07:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"retrieval_limit"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"retrieval_count"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"verification_options"</span><span class="p">:</span><span class="w">
+  </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"running_number"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/wApY3CTo6Q"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves list members public link in member.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links</code></p>
+
+          <h2 id="member-public-link">Member public link</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"TiHYgGk3Vg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-04T00:00:00.000+07:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"retrieval_limit"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"retrieval_count"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verification_options"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+       </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"running_number"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/TiHYgGk3Vg"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves members public link in member.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}</code></p>
+
+          <h2 id="create-member-public-link">Create member public link</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"public_link"</span><span class="w"> </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"EyQfXMZm_A"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-30T16:08:59.000+07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"retrieval_limit"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"retrieval_count"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"verification_options"</span><span class="p">:</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"running_number"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/EyQfXMZm_A"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves create members public link in member.</p>
+
+<ul>
+<li>Public Link option must be enabled in member group before using this api.</li>
+</ul>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<ul>
+<li>expire_datetime is required field. </li>
+<li>retrieval_limit is required field.</li>
+</ul>
+
+          <h2 id="update-member-public-link">Update member public link</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"public_link"</span><span class="w"> </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"PRkXQ-k4vA"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-30T16:08:59.000+07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"retrieval_limit"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"retrieval_count"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"enabled"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"verification_options"</span><span class="p">:</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"running_number"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/PRkXQ-k4vA"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves update members public link in member.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PATCH api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links/${uid}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<ul>
+<li>expire_datetime is required field.</li>
+<li>retrieval_limit is required field.</li>
+</ul>
+
+          <h2 id="public-link-parameters">Public Link Parameters</h2>
+
+<ul>
+<li>pk_template_name is required for every member</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>membership_number</td>
+<td>String</td>
+<td>หมายเลขสมาชิก</td>
+</tr>
+<tr>
+<td>expire_datetime</td>
+<td>datetime</td>
+<td>วันหมดอายุ</td>
+</tr>
+<tr>
+<td>retrieval_limit</td>
+<td>Integer</td>
+<td>ลิมิตในการได้รับ Pass</td>
+</tr>
+<tr>
+<td>retrieval_count</td>
+<td>Integer</td>
+<td>จำนวนการรับ Pass</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>สถานะ</td>
+</tr>
+<tr>
+<td>verification_options</td>
+<td>Array</td>
+<td>การยืนยันตัวตน</td>
+</tr>
+<tr>
+<td>pass_url</td>
+<td>String_url</td>
+<td>ลิ้งค์สำหรับได้รับ Pass</td>
 </tr>
 </tbody></table>
 
