@@ -1,1 +1,24 @@
 <h1 id="member">Member</h1>
+
+<p>Member คือผู้ถือพาส และจะมีข้อมูลได้ตามที่กำหนดไว้ในหน้า Setting ของ Mellow Lounge ใน Menu ชื่อ Member Fields
+คุณสมบัติต่างๆที่สำคัญของ Member คือ</p>
+
+<ol>
+<li>Member จะต้องมี Member Group เสมอ</li>
+<li><code class="prettyprint">membership_number</code> เปรียบเสมือน Primary Key ห้ามซ้ำโดยเด็ดขาดทุก status</li>
+<li>Member จะมี Member UID ถูกสร้างขึ้นมาทุกครั้งโดยที่ Mellow Lounge เป็นผู้สร้างให้</li>
+<li>Status ของ Member มีสามแบบ โดยที่สามารถประยุกใช้ได้ตาม Use case ต่างๆ
+
+<ol>
+<li><code class="prettyprint">unverified</code> - สร้าง Member ได้โดยที่ไม่มีการตรวจสอบ Field ห้ามซ้ำ</li>
+<li><code class="prettyprint">registered</code> - เปรียบเสมือน Member ที่ลงทะเบียนแล้ว ระบบจะบล๊อคข้อมูลห้ามซ้ำ</li>
+<li><code class="prettyprint">verified</code> - เปรียบเสมือน Member ที่ได้รับการตรวจสอบตัวตนแล้ว ระบบจะบล๊อคข้อมูลห้ามซ้ำ</li>
+</ol></li>
+<li>Fields ที่ห้ามซ้ำ
+
+<ol>
+<li><code class="prettyprint">telephone</code></li>
+<li><code class="prettyprint">email</code></li>
+<li><code class="prettyprint">identification_number</code></li>
+</ol></li>
+</ol>
