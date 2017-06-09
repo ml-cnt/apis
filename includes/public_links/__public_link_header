@@ -1,1 +1,21 @@
 <h1 id="public-link">Public link</h1>
+
+<p>Public Link คือ API ที่ใช้สำหรับแจกจ่ายใน Public ซึ่งจะมีคุณสมบัติแตกต่างจาก <code class="prettyprint">create_pass_url</code> ดังนี้</p>
+
+<ol>
+<li>Public Link จะต้องมีการเปิดใช้งาน Public Link ใน Member Group ก่อน</li>
+<li>Public Link จะต้องกรอกข้อมูลของผู้รับบัตร เพื่อยืนยันตัวตนก่อนที่จะรับบัตร โดยมี Fields ดังนี้
+
+<ol>
+<li>Email</li>
+<li>Identification Number</li>
+<li>Running Number</li>
+<li>Membership Number</li>
+<li>First Name</li>
+<li>Last Name</li>
+<li>Telephone</li>
+<li>Day of Birth</li>
+<li>Month of Birth</li>
+<li>Year of Birth</li>
+</ol></li>
+</ol>
