@@ -461,7 +461,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member">Create member</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">,</span> <span class="nx">headers</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members'</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">headers</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -892,7 +892,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member-public-link">Create member public link</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">,</span> <span class="nx">headers</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'api/v2/member_groups/${member_group_uid}/members/${member_uid}/member_public_links'</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">headers</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
