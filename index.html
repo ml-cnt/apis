@@ -254,13 +254,13 @@
 
 <span class="c1">// request using Axios</span>
 <span class="c1">// GET</span>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'https://dev-mellow-lounge-v2.cloudandthing.com/api/v2/user/someapi'</span><span class="p">,</span> <span class="nx">headers</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'HOSTNAME/api/v2/user/someapi'</span><span class="p">,</span> <span class="nx">headers</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
   <span class="p">});</span>
 
 <span class="c1">// POST,PUT,PATCH</span>
 <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'https://dev-mellow-lounge-v2.cloudandthing.com/api/v2/user/someapi'</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">headers</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'HOSTNAME/api/v2/user/someapi'</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">headers</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
   <span class="p">});</span>
 
