@@ -272,6 +272,13 @@
 
 <p>CloudAndTHING Ticket uses JSON Web Tokens (JWT) to authorize all api requests. For more information, please read <a href="https://jwt.io">jwt.io</a></p>
 
+<p><code class="prettyprint">JWT</code> can be obtained from Mellow Lounge Settings Menu. Settings &gt; Business Clients &gt; select desired business client &gt; Public API Secret Keys.</p>
+
+<ul>
+<li><code class="prettyprint">Public Api Key</code> - is <code class="prettyprint">api_key</code></li>
+<li><code class="prettyprint">Public Api Secret</code> - is <code class="prettyprint">api_secret</code></li>
+</ul>
+
 <p>The JWT needs to be encrypted with the HS256 algorithm (which should be noted in the token headers) and it must be signed with your API secret.</p>
 
 <p>The JWT payload required in the APIs are:</p>
