@@ -1718,15 +1718,13 @@ It is important that the expiry time must be in the Unix time format and no more
 <li>Required Template Name designed in Mellow Lounge</li>
 </ul>
 
+<p>Developer must store <code class="prettyprint">uid</code> in their own database in order to update.</p>
+
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">POST https://node.ml-cnt.com/api/v2/passes</code></p>
 
-<h3 id="query-parameters">Query Parameters</h3>
-
-<ul>
-<li>id is required field.</li>
-</ul>
+<h3 id="response-parameters">Response Parameters</h3>
 
 <table><thead>
 <tr>
@@ -1814,10 +1812,6 @@ It is important that the expiry time must be in the Unix time format and no more
 <p><code class="prettyprint">PUT https://node.ml-cnt.com/api/v2/passes/${uid}</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
-
-<ul>
-<li>id is required field.</li>
-</ul>
 
 <table><thead>
 <tr>
