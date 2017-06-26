@@ -1,0 +1,15 @@
+<h1 id="passes-node">Passes (Node)</h1>
+
+<p>Node คือ Function สำหรับการใช้งาน Pass โดยที่ทาง MellowLounge จะไม่เก็บข้อมูลให้
+ผู้ใช้งาน (developers) จะต้องเตรียมตัวดังนี้ เพื่อที่จะใช้งาน Node</p>
+
+<ol>
+<li>เปิดระบบ Mellow Lounge &gt; Business Client</li>
+<li>เปิดหน้า Mellow Lounge Public API Key</li>
+<li>กด &ldquo;Activate Node&rdquo;</li>
+<li>Copy <code class="prettyprint">Api Key</code> และ <code class="prettyprint">Api Secret</code> เพื่อนำมาสร้าง JWT</li>
+</ol>
+
+<p>สำหรับรายละเอียด Payload ของ Pass สามารถดูได้ที่</p>
+
+<p><a href="https://dev.passkit.net/#apple-wallet-template">Passkit Apple Wallet Structure</a></p>
