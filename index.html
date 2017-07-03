@@ -474,32 +474,30 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"LtLN6AH0Ig"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jutamas"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Thongkapon"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"juthamas.ko@gmail.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0886185060"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1990</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"registered"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-19T16:59:59.999Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"create_pass_url"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.something.com/something/uid"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">change</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">future</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"LtLN6AH0Ig"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jutamas"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Thongkapon"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"juthamas.ko@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0886185060"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1990</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"registered"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-19T16:59:59.999Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"create_pass_url"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.something.com/something/uid"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">change</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">future</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves member in member group.</p>
 
@@ -547,34 +545,32 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member1"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1@gmai.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0889999999"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1100500505050"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"create_pass_url"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.something.com/something/uid"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">change</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">future</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1@gmai.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"0889999999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1100500505050"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"create_pass_url"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.something.com/something/uid"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">change</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">future</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves create member.</p>
 
@@ -853,38 +849,35 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test_1"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member_1"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1234@gmai.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"089-1234567"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"identification_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1990</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23400505672"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"create_pass_url"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.something.com/something/uid"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">change</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">future</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1234@gmai.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"089-1234567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identification_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1990</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23400505672"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"create_pass_url"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.something.com/something/uid"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">change</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">future</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves update Member.</p>
 
@@ -1010,36 +1003,33 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-       </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test_1"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member_1"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1234@gmail.com"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"089-1234567"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"identification_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1990</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mellow-lounge-v2-dev.s3-ap-southeast-1.amazonaws.com/members/profile_images/000/000/696/original/images?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJAUIDIX6S3LKZR3A%2F20170614%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20170614T114357Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e12205fb6b20373897522363c6eb060a45d1d433da26946a13a940e1e739fdd7"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"A1fH4jQL-w"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"member_group_uid"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"rMukii5aGg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="s2">"Test_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"Member_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="w">               </span><span class="p">:</span><span class="w"> </span><span class="s2">"test_member1234@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="s2">"089-1234567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"mem-00001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identification_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1990</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"profile_image_url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mellow-lounge-v2-dev.s3-ap-southeast-1.amazonaws.com/members/profile_images/000/000/696/original/images?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJAUIDIX6S3LKZR3A%2F20170614%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20170614T114357Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e12205fb6b2037397522363c6eb060a45d1d433da26946a13a940e1e739fdd7"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone_preference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bangkok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pk_template_name"</span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER_PLUS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w">              </span><span class="p">:</span><span class="w"> </span><span class="s2">"unverified"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ui_language"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-02T16:59:59.999Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identification_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_birth"</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_birth"</span><span class="w">      </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year_of_birth"</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="mi">1992</span><span class="w">
   </span><span class="p">}</span><span class="w">
-
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves update member profile image.</p>
 
@@ -1239,8 +1229,7 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_link"</span><span class="w"> </span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1258,7 +1247,6 @@ It is important that the expiry time must be in the Unix time format and no more
       </span><span class="s2">"pass_url"</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/EksYb8ZIog"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves get public link from membership number.</p>
 
@@ -1391,8 +1379,7 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"uid"</span><span class="w">                 </span><span class="p">:</span><span class="w"> </span><span class="s2">"TiHYgGk3Vg"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"membership_number"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"expire_datetime"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-04T00:00:00.000+07:00"</span><span class="p">,</span><span class="w">
@@ -1406,7 +1393,6 @@ It is important that the expiry time must be in the Unix time format and no more
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/TiHYgGk3Vg"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves members public link in member.</p>
 
@@ -1457,8 +1443,7 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_link"</span><span class="w"> </span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1476,7 +1461,6 @@ It is important that the expiry time must be in the Unix time format and no more
       </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/EyQfXMZm_A"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves create members public link in member.</p>
 
@@ -1537,8 +1521,7 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"success"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_link"</span><span class="w"> </span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1556,7 +1539,6 @@ It is important that the expiry time must be in the Unix time format and no more
       </span><span class="s2">"pass_url"</span><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.admin.ml-cnt.com/p/pl/PRkXQ-k4vA"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves update members public link in member.</p>
 
@@ -1707,11 +1689,9 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"uid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <ul>
 <li>Create new Pass with any datasource</li>
@@ -1796,11 +1776,9 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"uid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <ul>
 <li>Update Pass with UID</li>
@@ -1845,11 +1823,9 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"images/dynamic/c183b523fb63c7d538b4b2a63446fa0a20ddca8c.png"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
 </span></code></pre>
 <h3 id="http-request">HTTP Request</h3>
 
