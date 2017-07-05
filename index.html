@@ -681,7 +681,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
           <h2 id="create-member-from-membership-number">Create member from membership number</h2>
 <pre class="highlight javascript tab-javascript"><code>
-<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/create_from_membership_number'</span><span class="p">,</span> <span class="nx">params</span> <span class="p">,</span><span class="nx">headers</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/api/v2/member_groups/${member_group_uid}/members/create_from_membership_number'</span><span class="p">,</span> <span class="nx">params</span> <span class="p">,</span><span class="nx">headers</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
   <span class="p">})</span>
@@ -692,7 +692,7 @@ It is important that the expiry time must be in the Unix time format and no more
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"success"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"member"</span><span class="w">  </span><span class="p">:</span><span class="w">
@@ -723,7 +723,7 @@ It is important that the expiry time must be in the Unix time format and no more
     </span><span class="p">}</span><span class="w">
 
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+
 </span></code></pre>
 <p>This endpoint retrieves create member from membership number.</p>
 
@@ -734,7 +734,7 @@ It is important that the expiry time must be in the Unix time format and no more
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET /api/v2/member_groups/${member_group_uid}/members/create_from_membership_number</code></p>
+<p><code class="prettyprint">POST /api/v2/member_groups/${member_group_uid}/members/create_from_membership_number</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
